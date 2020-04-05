@@ -1,0 +1,25 @@
+{
+  "name": "walidacjaformularzy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine",
+    "j-init": "jasmine init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahexx/FormValidation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rahexx/FormValidation/issues"
+  },
+  "homepage": "https://github.com/Rahexx/FormValidation#readme",
+  "devDependencies": {
+    "jasmine": "^3.5.0"
+  },
+  "dependencies": {},
+  "keywords": [],
+  "description": ""
+}

@@ -6,44 +6,32 @@
 
 body {
   background: rgba(232, 65, 145, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(232, 65, 145, 1)),
-    color-stop(53%, rgba(255, 59, 252, 1)),
-    color-stop(100%, rgba(195, 84, 255, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e84191', endColorstr='#c354ff', GradientType=1 );
+  background: -moz-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: -webkit-gradient(left top,
+      right top,
+      color-stop(0%, rgba(232, 65, 145, 1)),
+      color-stop(53%, rgba(255, 59, 252, 1)),
+      color-stop(100%, rgba(195, 84, 255, 1)));
+  background: -webkit-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: -o-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: -ms-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: linear-gradient(to right,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e84191', endColorstr='#c354ff', GradientType=1);
 }
 
 main {
@@ -109,7 +97,7 @@ form .section label::after {
   bottom: -1px;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid #5fa8d3;
+  border-bottom: 3px solid #e546fd;
   -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -126,22 +114,22 @@ form .section label::after {
   transition: 0.3s ease;
 }
 
-form input:focus + .label .content,
-form input:valid + .label .content {
+form input:focus+.label .content,
+form input:valid+.label .content {
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   font-size: 14px;
-  color: #5fa8d3;
+  color: #e546fd;
 }
 
-form input:focus + .label::after,
-form input:valid + .label::after {
+form input:focus+.label::after,
+form input:valid+.label::after {
   -webkit-transform: translateX(0%);
   transform: translateX(0%);
 }
 
-form .sectionCheckbox input:valid + .label-rodo {
-  color: #5fa8d3;
+form .sectionCheckbox input:valid+.label-rodo {
+  color: #e546fd;
 }
 
 button {
@@ -160,44 +148,32 @@ button {
   cursor: pointer;
   outline: 0;
   background: rgba(232, 65, 145, 1);
-  background: -moz-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right top,
-    color-stop(0%, rgba(232, 65, 145, 1)),
-    color-stop(53%, rgba(255, 59, 252, 1)),
-    color-stop(100%, rgba(195, 84, 255, 1))
-  );
-  background: -webkit-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    left,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  background: linear-gradient(
-    to right,
-    rgba(232, 65, 145, 1) 0%,
-    rgba(255, 59, 252, 1) 53%,
-    rgba(195, 84, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e84191', endColorstr='#c354ff', GradientType=1 );
+  background: -moz-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: -webkit-gradient(left top,
+      right top,
+      color-stop(0%, rgba(232, 65, 145, 1)),
+      color-stop(53%, rgba(255, 59, 252, 1)),
+      color-stop(100%, rgba(195, 84, 255, 1)));
+  background: -webkit-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: -o-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: -ms-linear-gradient(left,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  background: linear-gradient(to right,
+      rgba(232, 65, 145, 1) 0%,
+      rgba(255, 59, 252, 1) 53%,
+      rgba(195, 84, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e84191', endColorstr='#c354ff', GradientType=1);
 }
 
 button:hover {
@@ -247,8 +223,8 @@ button:hover {
     font-size: 26px;
   }
 
-  form input:focus + .label .content,
-  form input:valid + .label .content {
+  form input:focus+.label .content,
+  form input:valid+.label .content {
     font-size: 24px;
   }
 
@@ -287,14 +263,15 @@ button:hover {
     font-size: 24px;
   }
 
-  form input:focus + .label .content,
-  form input:valid + .label .content {
+  form input:focus+.label .content,
+  form input:valid+.label .content {
     font-size: 22px;
   }
 
   .section input {
     font-size: 18px;
   }
+
   .sectionCheckbox input {
     display: inline-block;
     height: 15px;
@@ -386,8 +363,8 @@ button:hover {
     font-size: 16px;
   }
 
-  form input:focus + .label .content,
-  form input:valid + .label .content {
+  form input:focus+.label .content,
+  form input:valid+.label .content {
     font-size: 14px;
   }
 
