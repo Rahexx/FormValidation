@@ -1,19 +1,44 @@
-function validateForm(form) {
+//Comment when use test
+const allHide = document.querySelectorAll(".hide");
 
-    return validateName(form[0][0].value) && validateEmail(form[0][1].value) && validatePassword(form[0][2].value) && confirm(form[0][2].value, form[0][3].value) && form[0][4].checked ? true : false;
+function validateForm(form) {
+    const flagName = validateName(form[0][0].value);
+    const flagEmail = validateEmail(form[0][1].value);
+    const flagPassword = validatePassword(form[0][2].value);
+    const flagConfirm = confirm(form[0][2].value, form[0][3].value);
+    const flagChecked = form[0][4].checked;
+
+    if (flagChecked === false) showError(4);
+    else hideError(4);
+
+    return flagName && flagEmail && flagPassword && flagConfirm && flagChecked ? true : false;
 }
 
 function validateName(name) {
-    return name.length > 2 && [...name].filter((el) => !isNaN(Number(el))).length === 0 && /^[a-zA-Z0-9]*$/.test(name) ? true : false;
+    const correctLength = name.length > 2 ? true : false;
+    const noNumbersAndSpecial = /^[a-zA-Z]*$/.test(name) ? true : false;
+    const validationResult = correctLength && noNumbersAndSpecial ? true : false;
+
+    if (validationResult === false) showError(0);
+    else hideError(0);
+
+    return validationResult;
 }
 
 function validateEmail(email) {
-
     const haveAt = email.includes("@") ? true : false;
-    if (!haveAt) return false;
+    if (!haveAt) {
+        showError(1);
+        return false;
+    }
+
     const haveText = email.split("@")[0].length > 1 ? true : false;
     const haveDomain = email.split("@")[1].length >= 5 && email.split("@")[1].includes(".") && (email.split("@")[1].indexOf(".") > 1 || email.split("@")[1].indexOf(".") < email.split("@")[1].length - 1);
-    return haveText && haveAt && haveDomain ? true : false;
+    const validationResult = haveText && haveAt && haveDomain ? true : false
+
+    if (validationResult === false) showError(1);
+
+    return validationResult;
 }
 
 function validatePassword(password) {
@@ -21,16 +46,35 @@ function validatePassword(password) {
     const haveNumber = /\d/.test(password);
     const haveSpecialSymbol = !/^[a-zA-Z0-9]*$/.test(password) ? true : false;
     const haveCapitalLetter = /[A-Z]/.test(password)
-    return haveCorrectLength && haveNumber && haveSpecialSymbol && haveCapitalLetter ? true : false;
+    const validationResult = haveCorrectLength && haveNumber && haveSpecialSymbol && haveCapitalLetter ? true : false
+
+    if (validationResult === false) showError(2);
+
+    return validationResult;
 }
 
-confirm = (password, repeatPassword) => password === repeatPassword;
+function confirm(password, repeatPassword) {
+    const validationResult = password === repeatPassword && password != "";
+    if (validationResult === false) showError(3);
+
+    return validationResult;
+}
+
+function showError(item) {
+    //Comment when use test
+    allHide[item].classList.remove("hide");
+}
+
+function hideError(item) {
+    //Comment when use test
+    if (!allHide[item].classList.contains("hide")) allHide[item].classList.add("hide");
+}
 
 export {
     validateForm,
 };
 
-//exports for test
+// exports for test
 // module.exports = {
 //     validateName,
 //     validateEmail,
