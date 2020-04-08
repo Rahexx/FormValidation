@@ -1,4 +1,4 @@
-//Comment when use test
+//Comment this line when you use test
 const allHide = document.querySelectorAll(".hide");
 
 function validateForm(form) {
@@ -61,12 +61,12 @@ function confirm(password, repeatPassword) {
 }
 
 function showError(item) {
-    //Comment when use test
+    //Comment this line when you use test
     allHide[item].classList.remove("hide");
 }
 
 function hideError(item) {
-    //Comment when use test
+    //Comment this line when you use test
     if (!allHide[item].classList.contains("hide")) allHide[item].classList.add("hide");
 }
 
