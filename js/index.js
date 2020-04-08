@@ -12,8 +12,40 @@ function clearInputs(form) {
 }
 
 button.addEventListener('click', function (e) {
-    e.preventDefault();
-    const result = validateForm(document.forms);
+    const form = document.forms;
+    const result = validateForm(form);
+    const API_URL = 'https://przeprogramowani.pl/projekt-walidacja';
+
+    if (result === true) {
+        const data = {
+            name: form[0][0].value,
+            email: form[0][1].value,
+            password: form[0][2].value,
+            rodo: form[0][4].value
+        }
+
+        fetch(API_URL, {
+                method: "POST",
+                mode: 'no-cors',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+            .then(res => {
+                if (res.ok) {
+                    return res.text()
+                }
+                throw 'Nie udało się wysłać zapytania'
+            })
+            .then(res => {
+                console.log(res.json())
+            })
+            .catch(err => {
+                alert('Spróbuj ponownie')
+            })
+    }
+
     clearInputs(document.forms);
-    console.log(result);
+
 })

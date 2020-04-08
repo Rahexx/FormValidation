@@ -71,7 +71,7 @@ function hideError(item) {
 }
 
 export {
-    validateForm,
+    validateForm
 };
 
 // exports for test
