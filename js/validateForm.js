@@ -87,8 +87,8 @@ export default validateForm;
 
 // exports for test
 // module.exports = {
-//     validateName,
-//     validateEmail,
-//     validatePassword,
-//     confirm,
-// }
+//   validateName,
+//   validateEmail,
+//   validatePassword,
+//   confirm,
+// };
